@@ -1,0 +1,261 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Light introduction to Vue.js</h3>
+					<aside class="notes"> In this presentation I will try to give all necessary information what is Vue.js, basic syntax of Мгу and some examples from real project 📝  </aside>
+					<img data-src="./assets/png/vuejs.png">
+				</section>
+				<section>
+					<h2>What is Framework?</h2>
+					<aside class="notes"> First of all let's start with theory what is framework. Frameworks need to create Dynamic applications or more often it is SPA 📝  </aside>
+					<div class="fragment">
+						<ol>
+							<li value=1>
+								Frameworks need for creation Single page Applications (SPA) and not only this
+							</li>
+							<li value=2>
+								The framework defines the basic structure and organization of the code
+							</li>
+							<li value=3>
+								The framework defines the structure of the application at the file system level and provides tools for compiling and debugging it
+							</li>
+							<li value=4>
+								The framework increases the speed of development as well as support and bug fixes in applications
+							</li>
+							<li value=5>
+								The ability to create cross-platform applications
+							</li>
+							<li value=6>
+								The framework makes it easier for several developers to work on an application at the same time because framework has modules
+							</li>
+						</ol>
+					</div>
+				</section>
+				<section>
+					<h2>Why Vue.js?</h2>
+					<aside class="notes"> In this presentation I will try to give all necessary information what is Vue.js, basic syntax of Мгу and some examples from real project. If compare with other frameworks from top 3 for me: Angular, Vue and react - all oof them fast and lightweght. They all + and - the same
+						laihtweaight - the final bandle which will be created will not have to much size
+						Foor me Vue combine all the best things from Angular and React. Routing redirections between pages. Vuex - a system that allows you to monitor the state of your application
+						Special utils for working end to end tests
+						possible to write in css and html preprosessors
+						+ for starting to woork with Vue need to know basic JS and HTML and CSS - that's all. No need to know type Script if compare it with Angular (but alloow to do this). No need to know JSx syntax if coompare it with React (but the same allow to do this). Vue template looks like a simple HTML with some features
+						Vue CLI - it is cmmand line interface, that allow us to configure the app
+						Grafical interface - here u can see your app, know his weight, switch between applications etc
+						One of the best oof documentation
+
+						and of course it is noot all pluses - it is base pluses. 📝  </aside>
+					<aside class="notes"> why Vue.js 📝  </aside>
+					<div class="fragment left-align">
+						<li>Execution speed</li>
+					</div>
+					<div class="fragment left-align">
+						<li>Lightweight</li>
+					</div>
+					<div class="fragment left-align">
+						<li>A lot of things are already out of the box. Routing, Vuex, Test utils, PWA, preprocessor support, animation, etc</li>
+					</div>
+					<div class="fragment left-align">
+						<li>Can start to use without additional knowledge</li>
+					</div>
+					<div class="fragment left-align">
+						<li>Vue CLI</li>
+					</div>
+					<div class="fragment left-align">
+						<li>Vue UI Tool. A graphical interface</li>
+					</div>
+					<div class="fragment left-align">
+						<li>Documentation</li>
+					</div>
+				</section>
+
+				<section>
+					<h2>Get started</h2>
+					<div class="fragment left-align">
+						<li>Plugin: Eslint</li>
+						<li>Plugin: Vetur</li>
+						<li>Plugin: Prettier</li>
+					</div>
+					<div class="fragment left-align">
+						<li>Need to do some VS code settings</li>
+					</div>
+					<div class="fragment left-align">
+						<li>Install Vue.js devtools plugin</li>
+					</div>
+				</section>
+
+				<section>
+					<section>
+						<h2>Installing Vue CLI</h2>
+						<div class="fragment left-align">
+							<li>Node.js</li>
+							<li>Vue CLI</li>
+							<pre><code data-trim data-noescape>npm install -g @vue/cli</code></pre>
+						</div>
+					</section>
+					<section>
+						<h2>Vue commands</h2>
+						<div class="fragment left-align">
+							<pre><code data-trim data-noescape>vue version</code></pre>
+							<pre><code data-trim data-noescape>vue create myapp</code></pre>
+						</div>
+					</section>
+					<section>
+						<h2>Installing Vue CLI</h2>
+						<aside class="notes"> Installing VUE CLI
+							 Will be opened UI interface, possible to run all commands(package.json) from terminal, but maybe somebody will like to do it via UI 📝  </aside>
+						<video src="./assets/video/vue_cli_installation.mov" data-autoplay></video>
+					</section>
+					<section>
+						<h2>Folder structure</h2>
+						<aside class="notes"> Folder structure.
+							 HTML: the main node element where will be rendered all app, main.js file with the main imports, App and another components, structure of them 📝  </aside>
+						<video src="./assets/video/vue_folder_structure.mp4" data-autoplay></video>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Vue components</h2>
+						<aside class="notes"> Components - it is small pieces of our application. So our application in the end will have several small components. Components will include any logic, HTML code and styles. These small components will be jooined to another big compooonents. Components should have a sence - it means possible to reuse it in another place of the app. And everything this will included to separate modules.
+							Each component have: template (posssible to create only 1 roote element), script - can we import other components, create any logic, etc, styles: scoped (styles only for current coomponent), global.
+
+							In scrip we should import any component, add infoo about it in list of the components, after that we can use it in template as a tag.📝  </aside>
+						<img data-src="./assets/jpeg/vue_components.jpg">
+					</section>
+					<section>
+						<h2>Template Syntax</h2>
+						<aside class="In template we can't use if and etc, but we can use ternary operator"></aside>
+						<video src="./assets/video/vue_template_syntax.mov" data-autoplay></video>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Attribute syntax</h2>
+						<aside class="notes"> Let's discuss attribute binding in HTML. Template syntax doesn't work with attributes. For this vue has special syntax.
+							before colon can be used v-bind.
+							in square brackets need to add attribute name 📝  </aside>
+						<img data-src="./assets/jpeg/attribute_syntax.jpg">
+					</section>
+					<section>
+						<h2>Directives. v-if/v-else</h2>
+						<aside class="notes">Directives - for performing conditional rendering,  v-if/v-else, v-else should be after v-if. the same for vi-else-if 📝  </aside>
+						<img data-src="./assets/jpeg/v-if.jpg">
+					</section>
+					<section>
+						<h2>Template directive</h2>
+						<aside class="notes"> Sometimes we can't use element with derictive, need to use directive separetly and for this poossible to use special presudo element - template, it will not render to HTML 📝  </aside>
+						<img data-src="./assets/jpeg/template_directive.jpg">
+					</section>
+					<section>
+						<h2>v-show/v-if</h2>
+						<aside class="notes"> When we use v-show - element hast style display none. Menus - v-show doesn't work on template and doesn't work with v-else📝  </aside>
+						<img data-src="./assets/jpeg/v-show.jpg">
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Event handling</h2>
+						<aside class="notes"> to event - possible to add event handler or any expression. Here can by any even: keyup, keyDown, mouseover etc📝  </aside>
+						<video src="./assets/video/event_1.mov" data-autoplay></video>
+					</section>
+					<section>
+						<h2>Event handling</h2>
+						<aside class="notes"> Add event - it is similar with angular - need to use $event. What about preventDefault method (for example we have link and we don;t want to goo to new page after click - > click.prevent). the same for others - u can read it in documentation
+							📝  </aside>
+						<img data-src="./assets/jpeg/event_handler.jpg" height="600px">
+					</section>
+					<section>
+						<h2>Event handling</h2>
+						<aside class="notes"> How to work with target or send data to event. the same foor keyboard events. @key.enter and etc📝  </aside>
+						<img data-src="./assets/jpeg/event_target.jpg" height="600px">
+					</section>
+					<section>
+						<h2>Get data from target and save it to variable</h2>
+						<img data-src="./assets/jpeg/target_save_data.jpg" height="500px">
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Computed properties</h2>
+						<aside class="notes"> use v-if, v-else is not good practic in HTML - I think you understand why, so better to move this loogic to separates place.
+							use this, because we work with component. If value shoudl change dynamically - for example use enter his name from input field, the same asprevious examples, to input need to add @key.enter event - user enter data - clcik enter - and in script - create method which will set to created variable, like firstName - value from target
+							+ computed propertis will cache data - simple method - no, computed properties has getter and setter and return this data, computed properties will cache data - simple method - no📝  </aside>
+						<img data-src="./assets/jpeg/computed_properties.jpg">
+					</section>
+					<section>
+						<h2>Computed properties: Get/Set</h2>
+						<aside class="notes">
+							+ computed properties has getter and setter and return this data📝  </aside>
+						<img data-src="./assets/jpeg/computed_get_set.jpg">
+					</section>
+					<section>
+						<h2>Watch</h2>
+						<aside class="notes">
+							+ if we need to check changes in properties📝  </aside>
+						<img data-src="./assets/jpeg/watch.jpg">
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Bind styles</h2>
+						<img data-src="./assets/jpeg/bind_styles_1.jpg" height="500px">
+					</section>
+					<section>
+						<h2>Bind styles</h2>
+						<img data-src="./assets/jpeg/bind_styles_2.jpg" height="500px">
+					</section>
+					<section>
+						<h2>Bind styles</h2>
+						<img data-src="./assets/jpeg/bind_styles_3.jpg" height="500px">
+					</section>
+					<section>
+						<h2>Bind styles</h2>
+						<img data-src="./assets/jpeg/bind_styles_4.jpg" height="500px">
+					</section>
+					<section>
+						<h2>Bind styles</h2>
+						<img data-src="./assets/jpeg/bind_styles_5.jpg" height="500px">
+					</section>
+					<section>
+						<h2>Bind styles</h2>
+						<aside class="notes">
+							Bind styles📝  </aside>
+							<video src="./assets/video/bind-styles.mov" data-autoplay></video>
+					</section>
+				</section>
+				<section>
+					<h2>Thank you</h2>
+				</section>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
